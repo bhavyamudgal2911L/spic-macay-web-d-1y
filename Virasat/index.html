@@ -6,6 +6,46 @@
   <title>Virasat '26</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B91C1C", // Vibrant Red
+              "background-light": "#FDF2F2", // Very light reddish white
+              "background-dark": "#1a0505", // Deepest dark red/black
+              "surface-dark": "#2b0a0a", // Slightly lighter dark red for cards/sections
+              "accent-gold": "#D4AF37",
+              "accent-beige": "#eaddcf", // New beige for the hero frame
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              'xl': "1rem",
+              '2xl': "1.5rem",
+              '3xl': "2rem",
+            },
+            animation: {
+              'marquee': 'marquee 40s linear infinite', 
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
 </head>
 
 <body>
@@ -18,9 +58,9 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero bg-black/30">
   
-  <div class="vertical-text">IIT ROORKEE</div>
+  <!-- <div class="vertical-text">IIT ROORKEE</div> -->
 
   <div class="stamp-frame">
 
@@ -44,13 +84,528 @@
 </section>
 
 <!-- Timeline -->
- <section id="timeline_sec">
+ <section id="timeline_sec" class="bg-black/30">
     <div id="hollow">
-    <img src="TIMELINE_SLAY_FIXED_B_Hori.png" alt="Timeline" id="img-horizontal">
+    <img src="TIMELINE_SLAY_FIXED_C_Hori.png" alt="Timeline" id="img-horizontal">
     <img src="TIMELINE_SLAY_FIXED_B_VERT.png" alt="" id="img-vertical">
 
     </div>
  </section>
+
+ <!-- Events -->
+<section class="py-10 overflow-hidden relative bg-black/30" id="events">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+<h2 class="text-4xl font-display font-bold text-gray-900 dark:text-white border-l-8 border-primary pl-6">Virasat Events</h2>
+<p class="mt-4 text-gray-400 pl-8 max-w-2xl">Discover a series of enchanting events designed to celebrate our rich heritage. Hover over the cards to learn more.</p>
+</div>
+<div class="marquee-container w-full overflow-hidden">
+<div class="flex animate-marquee gap-8 w-max pl-4 hover:[animation-play-state:paused] py-10">
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Dance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-xHCIH6UW-MfYTIwd2XInjXxjQ7Yhd7Qu4-HE7mo7X5ZdzofyL44-7w-n9leL6AhE9Gqy8qWtbESXRC8vLfYbcfJfcqNcDjRLICaRJyiZcMphPn9-f0A3d6jS913ZJVxXESWFmbCRgpmn4VBp_FrU14CTiQaXJD1NDPg3hvlfZq5B9ibsuMYpgpeL-fWBdqaj4iN8NG1y6mpaMwSbSFaGVXz-wAU9vVmMCBohtl7SzOf7VK1mMk3S5qxPbP8BCl5mMKXsl7k1qJT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Dance Extravaganza</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Experience the rhythm and grace of diverse dance forms.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Dance Details</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Join us for a mesmerizing evening of classical and folk dances from around the country. Performers include award-winning artists.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Music" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo8tiS-ncE3Sau5pxIlmc6xJ99SydH4wILMdI47kbLZJXLXLHlUbZNf3QHbwu0fgzz8kCtrU20OjXJavQXg1CYkqOuWckPylRlYjHYyRv_wuh-coTSW1679KLnKsA8jlBTBbSYVRxDKb68-2434hrOvVtrMP4LzL62M9lQfMzwI0goqMvqwikwyGt473gZ8bQRsxPoXU0dAfnXtmgi8yJIBoIgIk8hbIRThctqxw3x1kMv64bB_GCliYwF7lT0ZLg-0ouzRqs8Q1Mn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Melodies of Past</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Journey through time with enchanting cultural performances.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Music Night</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">An acoustic session featuring traditional instruments like the Sitar and Tabla. A soulful experience awaits.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Art" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwc5AVYF-JKnUpOcOLuJ48nflVZEBxAge1nrakSkkg0NAsj6WmxKv_z4e4xAQL-pgSXv2btyTzgqxLRG8yKyXWTJDK6SqwrJS_wgQ5uP11EBz9sDlSpsjVmFtovOmVtLynqml4Wf40YBa4Irhh_aRxlxFU3JPJR1ZMUF3WV2JHwpgm-kS0C7IPq-vcvsbREzpEtjAFwhOqIB8idQ2Kh5rNETwvcRkh-OtE5HZlwV7KNittkLSnTU2HWlIpUhOMDJEUTNa9_4IKU6Hb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Art Through Ages</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Witness a stunning display of artistic creations.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Exhibition Info</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Explore rare artifacts and contemporary interpretations of historical art forms in our main gallery.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="History" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Zun-Y_62Gz2-4QSfz2W6YGzxb84qY6H7H70Im_G7MxnsHi2yGLCYqIPTRX6-lwRkdZHD_eT8FpjXbKyvs7y3i8W4QPS6KXFJlwtjtlk5TAcSR-QHyhirLpywA7OOZDLgOeGcq9DpVLBDIO9A0QQ_8wkv9kumhMdDrI5Cob9zsy_P7Nc4T11bJ9BFpwcKuw1SghfJjr6al4Vty9-X5ot0afyno67FhNRJzu2ASSe7dYIqQ9JXR8QwiujETEYoBFUpcSsmQJDIRv9h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">History Walk</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Explore historical sites and hidden stories.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Heritage Walk</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">A guided tour through the ancient corridors of the city, revealing secrets of the past.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Dance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-xHCIH6UW-MfYTIwd2XInjXxjQ7Yhd7Qu4-HE7mo7X5ZdzofyL44-7w-n9leL6AhE9Gqy8qWtbESXRC8vLfYbcfJfcqNcDjRLICaRJyiZcMphPn9-f0A3d6jS913ZJVxXESWFmbCRgpmn4VBp_FrU14CTiQaXJD1NDPg3hvlfZq5B9ibsuMYpgpeL-fWBdqaj4iN8NG1y6mpaMwSbSFaGVXz-wAU9vVmMCBohtl7SzOf7VK1mMk3S5qxPbP8BCl5mMKXsl7k1qJT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Dance Extravaganza</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Experience the rhythm and grace of diverse dance forms.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Dance Details</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Join us for a mesmerizing evening of classical and folk dances from around the country. Performers include award-winning artists.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Music" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo8tiS-ncE3Sau5pxIlmc6xJ99SydH4wILMdI47kbLZJXLXLHlUbZNf3QHbwu0fgzz8kCtrU20OjXJavQXg1CYkqOuWckPylRlYjHYyRv_wuh-coTSW1679KLnKsA8jlBTBbSYVRxDKb68-2434hrOvVtrMP4LzL62M9lQfMzwI0goqMvqwikwyGt473gZ8bQRsxPoXU0dAfnXtmgi8yJIBoIgIk8hbIRThctqxw3x1kMv64bB_GCliYwF7lT0ZLg-0ouzRqs8Q1Mn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Melodies of Past</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Journey through time with enchanting cultural performances.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Music Night</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">An acoustic session featuring traditional instruments like the Sitar and Tabla. A soulful experience awaits.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Art" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwc5AVYF-JKnUpOcOLuJ48nflVZEBxAge1nrakSkkg0NAsj6WmxKv_z4e4xAQL-pgSXv2btyTzgqxLRG8yKyXWTJDK6SqwrJS_wgQ5uP11EBz9sDlSpsjVmFtovOmVtLynqml4Wf40YBa4Irhh_aRxlxFU3JPJR1ZMUF3WV2JHwpgm-kS0C7IPq-vcvsbREzpEtjAFwhOqIB8idQ2Kh5rNETwvcRkh-OtE5HZlwV7KNittkLSnTU2HWlIpUhOMDJEUTNa9_4IKU6Hb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Art Through Ages</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Witness a stunning display of artistic creations.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Exhibition Info</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Explore rare artifacts and contemporary interpretations of historical art forms in our main gallery.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="History" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Zun-Y_62Gz2-4QSfz2W6YGzxb84qY6H7H70Im_G7MxnsHi2yGLCYqIPTRX6-lwRkdZHD_eT8FpjXbKyvs7y3i8W4QPS6KXFJlwtjtlk5TAcSR-QHyhirLpywA7OOZDLgOeGcq9DpVLBDIO9A0QQ_8wkv9kumhMdDrI5Cob9zsy_P7Nc4T11bJ9BFpwcKuw1SghfJjr6al4Vty9-X5ot0afyno67FhNRJzu2ASSe7dYIqQ9JXR8QwiujETEYoBFUpcSsmQJDIRv9h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">History Walk</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Explore historical sites and hidden stories.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-bold uppercase tracking-wider">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#200505] p-8 flex flex-col justify-center items-center border border-primary/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Heritage Walk</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">A guided tour through the ancient corridors of the city, revealing secrets of the past.</p>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors relative z-10 shadow-lg shadow-red-900/50">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-surface-dark/20 bg-black/30" id="workshops">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+<h2 class="text-4xl font-display font-bold text-gray-900 dark:text-white border-l-8 border-accent-gold pl-6">Virasat Workshops</h2>
+<p class="mt-4 text-gray-400 pl-8 max-w-2xl">Get hands-on with history. Our workshops offer a unique opportunity to learn traditional crafts from the masters.</p>
+</div>
+<div class="marquee-container w-full overflow-hidden">
+<div class="flex animate-marquee gap-8 w-max pl-4 hover:[animation-play-state:paused] py-10" style="animation-direction: reverse;">
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Clay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbm4esCOgaH05tANNEKGB8OtZqTemx3tElHA5QBcRQWSAklOC0DmN4ouFg2FRAQSIwxjA2WpSalec4TNSmMEjli5SCcdF15O7umyB4UHNSw6NNdFFvHA_cQM8Oa403JQIIjo6vFtoYJel90OQ7fLrOtEx8rhzTroXUdsgH3iLEeaeschFf3KoJa1vTkyViZx-dJ-Rq5NqMZOowAha21gHci3g_dWonS8ur-vv9XRj49svTfusnrd1lZXHBy1x6LS9NjGr6I5gq-MdG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Clay Creations</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Learn the art of pottery and create your own masterpiece.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Pottery Workshop</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Hands-on session with master potters. All materials provided. Take home your own clay creation.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Calligraphy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl0bvUvCLaSIwuTB5ZgEg9NEREBMAkSgxn0S_IsGteNek1aXXrLGcLam8ajW0NWVAN8yl0EIUIuEYzaIhBeedjp8hR15BYs0JPtqyuAvwwGPIhS0HkkCz9_uQjqnY2fsylyZbBGirF0lvj2KGrAi6G8yuuD4x-kXR09cL5iAGbqZm9LXG_lgtKSjs955nfLtmu2H220QYHLDQvj99H0L4n18EohLy247scs7PqolAzZHMwsnoLCP_Qi4Qi9py2Q6aJmhFOQl-FsKBu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Elegant Script</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Master the beautiful strokes of calligraphy.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Calligraphy 101</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Learn traditional ink techniques and brush control. Perfect for beginners.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Textile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAj3UZx1_s6N9o22ZeH0Cd0hvlRsoU1T5ji2N0HrS1uPQMrm_nDOj4sjmilhrQgz3oLR9E9-GEB1GQw9XY-msH3XI81RvM1yD__STElUxqkz2porsohILNRxvSE-McfL3ZcK-VLPnPGZFCji9yE7_wQRUB_I_BuCyEyJDbrtNo5xeNzw7kmOEJnsx-NzFFB4zIIGDzI3epfdgmFEdL0a8WtHKFM8LuT4-CJV5EfwHohigAbC703FYILN5tiXB0q9_9CWtX4OPOQ2t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Threads Tradition</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Discover the intricate technique of textile weaving.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Weaving Workshop</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Understand the looms and threads that make our heritage textiles famous worldwide.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Food" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4v9jCeT2ersohisQEXI8iZV9EcCwwnY8WieRSH_d9IINOjkO5j49k8hxnnsYzN44vZb5AvKNWpzjAYKW9HZNN4vOW6FuAb59Aq-M3nnrVsBp_7b4EEPhNwdbDFBChHnsG87tvv8PrEJpi1U6Lxuq-t5nHJjPb_ltRq02cmeCgfrqLlCQBV8q_jyka1h_7-SwuXzKF01C9EfQQovktrN93idnDZz0N423sO4EaHxYQS1ySp_UimEHoCiS90toX8bTrnDYg_1lcChiM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Heritage Flavors</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Savor authentic tastes of traditional cuisine.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Culinary Class</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Cook alongside grandmothers who hold secret family recipes passed down for generations.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Clay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbm4esCOgaH05tANNEKGB8OtZqTemx3tElHA5QBcRQWSAklOC0DmN4ouFg2FRAQSIwxjA2WpSalec4TNSmMEjli5SCcdF15O7umyB4UHNSw6NNdFFvHA_cQM8Oa403JQIIjo6vFtoYJel90OQ7fLrOtEx8rhzTroXUdsgH3iLEeaeschFf3KoJa1vTkyViZx-dJ-Rq5NqMZOowAha21gHci3g_dWonS8ur-vv9XRj49svTfusnrd1lZXHBy1x6LS9NjGr6I5gq-MdG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Clay Creations</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Learn the art of pottery and create your own masterpiece.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Pottery Workshop</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Hands-on session with master potters. All materials provided. Take home your own clay creation.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Calligraphy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl0bvUvCLaSIwuTB5ZgEg9NEREBMAkSgxn0S_IsGteNek1aXXrLGcLam8ajW0NWVAN8yl0EIUIuEYzaIhBeedjp8hR15BYs0JPtqyuAvwwGPIhS0HkkCz9_uQjqnY2fsylyZbBGirF0lvj2KGrAi6G8yuuD4x-kXR09cL5iAGbqZm9LXG_lgtKSjs955nfLtmu2H220QYHLDQvj99H0L4n18EohLy247scs7PqolAzZHMwsnoLCP_Qi4Qi9py2Q6aJmhFOQl-FsKBu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Elegant Script</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Master the beautiful strokes of calligraphy.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Calligraphy 101</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Learn traditional ink techniques and brush control. Perfect for beginners.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Textile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAj3UZx1_s6N9o22ZeH0Cd0hvlRsoU1T5ji2N0HrS1uPQMrm_nDOj4sjmilhrQgz3oLR9E9-GEB1GQw9XY-msH3XI81RvM1yD__STElUxqkz2porsohILNRxvSE-McfL3ZcK-VLPnPGZFCji9yE7_wQRUB_I_BuCyEyJDbrtNo5xeNzw7kmOEJnsx-NzFFB4zIIGDzI3epfdgmFEdL0a8WtHKFM8LuT4-CJV5EfwHohigAbC703FYILN5tiXB0q9_9CWtX4OPOQ2t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Threads Tradition</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Discover the intricate technique of textile weaving.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Weaving Workshop</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Understand the looms and threads that make our heritage textiles famous worldwide.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[26rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-dark flex flex-col">
+<div class="h-1/2 w-full relative">
+<img alt="Food" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4v9jCeT2ersohisQEXI8iZV9EcCwwnY8WieRSH_d9IINOjkO5j49k8hxnnsYzN44vZb5AvKNWpzjAYKW9HZNN4vOW6FuAb59Aq-M3nnrVsBp_7b4EEPhNwdbDFBChHnsG87tvv8PrEJpi1U6Lxuq-t5nHJjPb_ltRq02cmeCgfrqLlCQBV8q_jyka1h_7-SwuXzKF01C9EfQQovktrN93idnDZz0N423sO4EaHxYQS1ySp_UimEHoCiS90toX8bTrnDYg_1lcChiM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-white mb-2 font-display" contenteditable="true">Heritage Flavors</h3>
+<p class="text-sm text-gray-400" contenteditable="true">Savor authentic tastes of traditional cuisine.</p>
+<div class="mt-4 flex items-center text-accent-gold text-sm font-bold uppercase tracking-wider">
+<span>Details</span>
+<span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl bg-[#1a1205] p-8 flex flex-col justify-center items-center border border-accent-gold/40 relative">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-gold to-transparent"></div>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Culinary Class</h3>
+<p class="text-gray-300 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Cook alongside grandmothers who hold secret family recipes passed down for generations.</p>
+<button class="bg-accent-gold hover:bg-yellow-600 text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10">Join Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-dark relative border-t border-white/5" id="about">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary to-orange-900 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
+<div class="relative h-96 w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+<img alt="Virasat Heritage" class="w-full h-full object-cover opacity-60 hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMUYyHZcq9ol7VDjRKhUG-tHezbJZw0dS2qHWGar--WrpWrHbWOOBNMjyrgyXxRms581hM0Lyeua0crHsR8DFAHmaHtb48R_4Xe_YfQIDi30RBPxW9kRKaXUrLmiSDy2Trtvc1PkAW66DtyXMlDSWCIggriPQkGLrmfV3UsrbU4A-kuq_v_4mTHPUw3Z6nzMK1VaGNnMNbHlXzkojbZXWBc53dQogpr-HK6VnzNQ0lV-L6QxCSwRCRoz06JQVCAHwt1lBB2uP_1-K"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center p-6 bg-black/60 backdrop-blur-sm rounded-xl border border-white/10">
+<h3 class="text-4xl font-display font-bold text-white mb-2">25+</h3>
+<p class="text-primary text-sm uppercase tracking-widest">Years of Legacy</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-12 h-1 bg-primary rounded-full"></span>
+<span class="text-primary font-medium tracking-wide uppercase">Our Story</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">Preserving the Past,<br/>Inspiring the Future.</h2>
+<p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Virasat '26 is more than just an event; it's a movement to revitalize our shared cultural identity. Born from a passion for history and art, Virasat has grown into a premier platform for artisans, performers, and historians.
+                    </p>
+<p class="text-gray-400 mb-8 leading-relaxed">
+                        This year, we focus on "Heritage in Harmony," exploring how ancient traditions seamlessly blend with modern expressions. Join us as we weave stories of resilience, beauty, and community.
+                    </p>
+<a class="inline-flex items-center text-white font-medium hover:text-primary transition-colors group" href="#">
+                        Read full story <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-black/40 border-y border-white/5" id="partners">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-2xl font-display font-bold text-white mb-10 opacity-80">Our Partners &amp; Sponsors</h2>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">museum</span>
+<span class="text-xl font-bold font-display text-white">CULTURE<span class="text-primary">HUB</span></span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">diamond</span>
+<span class="text-xl font-bold font-sans text-white tracking-widest">ROYAL</span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">auto_awesome</span>
+<span class="text-xl font-bold font-display text-white italic">Artistry</span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">public</span>
+<span class="text-xl font-bold text-white">Global<span class="font-light">Roots</span></span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">history_edu</span>
+<span class="text-xl font-bold font-display text-white">Scrolls</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 text-center bg-background-light dark:bg-background-dark relative overflow-hidden" id="cta">
+<div class="absolute inset-0 z-0 opacity-10">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8_VaZR9pJkeIZsWicPQyG8VAf1x5hb4TqOQD-PRStI2qDjSR-OZeElSjoOXdudU5FGZw1mqoVcOH037LGWtHFtZUiDq-nCcAwIZsut6sKTU5cXrisNQBeVW5fz74rQdEZqSJZkMeZcRqpxCD0zpa_a0xDnoyNNXcwkItl2AQ_X5qzFV2WFX0AXXGqZMGo_c_Q1OW3AjPDCgl2DecSufc2LbXa_X0zj5g92EtjPgGlTi8jktjqiBV3-_OWSTXDLuicPzLA7PXLVNYg"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-4">
+<h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">Be a Part of Virasat '26</h2>
+<p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join us in celebrating our cultural heritage. Volunteer, sponsor, or simply attend and immerse yourself in the festivities.
+            </p>
+<button class="bg-primary hover:bg-red-800 text-white text-lg px-12 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                Get Involved
+            </button>
+</div>
+</section>
+<footer class="bg-surface-dark text-gray-400 py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left mb-8">
+<div>
+<h4 class="text-white font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-center justify-start">
+<h4 class="text-white font-bold mb-4">Socials</h4>
+<div class="flex space-x-6">
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+</div>
+</div>
+<div class="text-center md:text-right">
+<h4 class="text-white font-bold mb-4">Newsletter</h4>
+<div class="flex flex-col sm:flex-row gap-2 justify-center md:justify-end">
+<input class="px-4 py-2 rounded bg-black/30 border border-gray-700 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-white" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="text-center border-t border-white/10 pt-8 text-sm">
+<p>© 2026 Virasat '26. All rights reserved.</p>
+</div>
+</div>
+</footer>
 
  
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virasat '26</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -52,15 +52,22 @@
 
 <header class="navbar">
   <div class="logo">SPIC MACAY <span>IIT ROORKEE</span></div>
-  <nav>
+  
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav-links">
     <a href="#">Home</a><a href="#">About</a><a href="#">Gallery</a>
     <a href="#">Events</a><a href="#">Team</a><a href="#">FAQs</a><a href="#">Newsletter</a>
   </nav>
 </header>
 
-<section class="hero bg-black/30">
+<section class="hero">
   
-  <!-- <div class="vertical-text">IIT ROORKEE</div> -->
+  <div class="vertical-text">IIT ROORKEE</div>
 
   <div class="stamp-frame">
 
@@ -68,14 +75,12 @@
     <div class="corner bottom-left"></div>
 
     <div class="hero-inner">
-      <div class="hero-left">
-        <img src="bg-mandala.png" class="mandala" alt="Mandala">
-        <img src="zakir-hussain.png" class="zakir" alt="Zakir Hussain">
-      </div>
-
+      <img src="bg-mandala.png" class="bg-watermark" alt="">
+  
+  <div class="hero-right">
       <div class="hero-right">
         <h1>Virasat ’26</h1>
-        <h3>Dedicated to Ustad Zakir Hussain</h3>
+        <h3>Heritage in Harmony</h3>
         <p>Dive into the soul of Indian culture with SPIC MACAY’s<br>
         Virasat – A journey of art, music, and legacy.</p>
       </div>

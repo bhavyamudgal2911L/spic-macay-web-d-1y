@@ -165,10 +165,19 @@ nav a:hover { color: #fff; }
   justify-content: center;
 }
 
-#timeline_img{
-  max-width: 100%;
+#hollow{
+  height: 100%;
+}
+
+#img-horizontal{
+  width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+}
+
+#img-vertical{
+  display: none;
 }
 
 
@@ -351,4 +360,18 @@ nav a:hover { color: #fff; }
     width: 100%;
     height: auto;
   }
+}
+
+@media screen and (max-width: 600px) {
+#img-horizontal{
+  display: none;
+}
+
+#img-vertical{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+  
 }

@@ -1,5 +1,13 @@
+html, body{
+  overflow-x: hidden;
+}
+
 .homeNav {
   background-color: #BC9A5F;
+}
+.navbar{
+  z-index: 9999;
+  max-width: 100%;
 }
 
 .navbar-brand img {
@@ -200,3 +208,112 @@ nav.navbar .nav-link:hover {
 .year {
   color: #D9B781;
 }
+/* for footer  */
+
+#ourPartner {
+    padding-left: 9%;
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: #3B140C;
+}
+
+#ourPartner h1 {
+    /* font-family: Irish Grover; */
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 58.03px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #ffffff
+}
+
+#partnersInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#partner {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#partner1 {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#partnerPhoto {
+    width: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 10px;
+    border: solid 2px black;
+}
+
+#partnerPhoto1 {
+    width: 250px;
+    aspect-ratio: 2;
+    margin: 10px;
+}
+
+#partnerPhoto1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#partnerPhoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#partnerName {
+    text-align: center;
+}
+
+#partnerName1 p {
+    /* font-family: Inter; */
+    padding-top: 30px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+#partnerName p {
+    /* font-family: Inter; */
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(0, 0, 0, 1);
+}
+ #Copyright{
+  background-color: #3B140C;
+  overflow: hidden;
+ }

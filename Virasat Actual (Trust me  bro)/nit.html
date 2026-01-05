@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Virasat '26 - Heritage in Harmony</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
+<link rel="stylesheet" href="nitstyle.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B91C1C", // Vibrant Red
+              "background-light": "#FDF2F2", // Very light reddish white
+              "background-dark": "#1a0505", // Deepest dark red/black
+              "surface-dark": "#2b0a0a", // Slightly lighter dark red for cards/sections
+              "accent-gold": "#C6A87C", // Muted gold/beige from reference
+              "accent-beige": "#eaddcf", // New beige for the hero frame
+              "frame-bg": "#3e1c1c", // Darker reddish brown for frame interior background
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              'xl': "1rem",
+              '2xl': "1.5rem",
+              '3xl': "2rem",
+            },
+            backgroundImage: {
+               'textured-red': "linear-gradient(to bottom, rgba(26,5,5,0.9), rgba(43,10,10,0.95))",
+            },
+            animation: {
+              'marquee': 'marquee 40s linear infinite', 
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+<style>.perspective-1000 {
+    perspective: 1000px
+    }
+.transform-style-3d {
+    transform-style: preserve-3d
+    }
+.backface-hidden {
+    backface-visibility: hidden
+    }
+.rotate-y-180 {
+    transform: rotatey(180deg)
+    }
+.group:hover .group-hover\:rotate-y-180 {
+    transform: rotatey(180deg)
+    }
+[contenteditable]:focus {
+    outline: 2px dashed #D4AF37;
+    outline-offset: 4px
+    }
+.marquee-container {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent)
+    }.stamp-frame {
+    background-color: #D6C0A6;padding: 10px;
+    position: relative;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    -webkit-mask-size: 24px 24px;mask-size: 24px 24px;
+    -webkit-mask-composite: destination-in;mask-composite: intersect
+    }.stamp-inner {
+    border: 2px solid rgba(198, 168, 124, 0.3);}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed
+    }.bg-texture-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA1KmK262veJh0-ZVdD94r7SOFz9v6TZX6vHsVV-RBzObatBuSwdxNLLIJQ7Wlq5I0M2vWAlkSCe3EQjBVdrtjGH0q06ZVt9eVSU7UnSIE2LKgRQPOQx6JpQm0J3CHw75l212lFeYr2O2tZnS8WUvZZ4ivbPmNQ6fsNhCRzTFak6ajU6msETvb5_Id6sr4_vW8bGj6LehNM6IogppoJ1Zqd9PjYqQYJJCSafiBvr-ge2rCx-IVvSb4xoibGdlLjNoDbXRZqmes9olFn);
+    opacity: 0.15;
+    pointer-events: none;
+    mix-blend-mode: overlay
+    }.timeline-circle-node {
+        transition: all 0.3s ease-out;
+    }
+    .timeline-circle-node:hover {
+        transform: scale(1.05);
+        z-index: 20;
+    }
+    .connector-line {
+        position: absolute;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #C6A87C, transparent);
+        z-index: 0;
+        transform-origin: left center;
+    }
+    </style>
+</head>
+<body class="bg-[#F2E4C5] text-white dark:text-gray-200 font-sans transition-colors duration-300 min-h-screen relative" style="overflow-x: hidden;">
+  
+<!-- header -->
+<header>
+ <!-- navbar starts  -->
+        <nav class="navbar mb-auto navbar-expand-lg text-center mb-5 homeNav px-5">
+            <div class="container-fluid container-lg px-lg-5">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="logo.png" height="60" alt="SPIC MACAY IITR">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="./gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="./events.html">Events</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="./team.html">Team</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="./faqs.html">FAQs</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-6">
+                            <a class="nav-link" href="public/newsletter.pdf">Newsletter</a>
+                        </li>
+                    </ul>
+                    <!-- <hr>
+                    <a class="btn virasat-button p-3" href="virasat/2025.html">Virasat 2025</a> -->
+                </div>
+            </div>
+        </nav>
+        <!-- navbar ends  -->
+
+</header>
+<section class="relative min-h-[85vh] md:h-[calc(100vh-80px)] pt-20 md:pt-24 flex items-center justify-center overflow-hidden">
+    
+    <div class="absolute inset-0 bg-[#3B140C] z-0"></div>
+
+    <div class="absolute inset-0 z-0 opacity-40 overflow-hidden">
+        <div class="absolute inset-0 scale-[1.3] mandala-bg"></div>
+    </div>
+
+    <div class="absolute inset-0 z-10 hero-vignette mix-blend-multiply pointer-events-none"></div>
+
+    <div class="absolute inset-0 z-20 pointer-events-none p-3 sm:p-4 md:p-12">
+        <div class="w-full h-full relative">
+            <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-accent-gold rounded-tl-3xl"></div>
+            <div class="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-accent-gold rounded-tr-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-accent-gold rounded-bl-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-accent-gold rounded-br-3xl"></div>
+        </div>
+    </div>
+
+    <div class="relative z-30 max-w-5xl mx-auto px-4 text-center -translate-y-6">
+
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-accent-gold/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="flex justify-center mb-6 opacity-80">
+             <span class="material-symbols-outlined text-accent-gold text-4xl">spa</span>
+        </div>
+
+        <h1 class="hero-title font-display text-[5rem] md:text-[8rem] lg:text-[10rem] font-medium leading-none mb-2">
+  <span class="text-gold-gradient block tracking-wide">Virasat</span>
+  <span class="year relative inline-block">
+  26
+</span>
+
+</h1>
+
+
+        <div class="flex items-center justify-center gap-4 mb-8 opacity-80">
+            <div class="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent to-accent-gold"></div>
+            <div class="w-1.5 h-1.5 rotate-45 bg-accent-gold shadow-[0_0_12px_rgba(198,168,124,0.6)]"></div>
+
+            <div class="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent to-accent-gold"></div>
+        </div>
+
+        <h2 class="text-2xl md:text-4xl font-display text-accent-beige/85 mb-8 tracking-[0.35em] uppercase">
+  Heritage in Harmony
+</h2>
+
+        <p class="text-base md:text-lg text-accent-beige/70 max-w-xl mx-auto leading-loose font-light mb-12 font-sans">
+            Dive into the soul of Indian culture with SPIC MACAY’s <br class="hidden md:block"/> 
+            <span class="text-accent-gold font-serif italic">legacy</span> of art, music, and tradition.
+        </p>
+    </div>
+</section>
+</header>
+<!-- Timeline -->
+<section class="py-12 relative bg-[#3B140C] overflow-hidden" id="timeline">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<div class="absolute inset-0" style="background-image: radial-gradient(#C6A87C 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-display font-bold text-accent-beige mb-4">Timeline of Events</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="relative min-h-[950px] flex items-center justify-center py-10">
+<div class="relative z-20 flex items-center justify-center">
+<div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent-gold/20 flex items-center justify-center bg-[#120605] shadow-[0_0_50px_rgba(198,168,124,0.1)] relative">
+<div class="absolute inset-2 rounded-full border border-dashed border-accent-gold/40 animate-spin-slow"></div>
+<div class="absolute inset-6 rounded-full border border-accent-gold/10"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<h3 class="font-display text-5xl md:text-6xl font-medium tracking-tight text-[#D9B781] drop-shadow-[0_0_12px_rgba(198,168,124,0.25)]">Virasat <span class="text-[#D9B781]">'26</span>
+</h3>
+</div>
+</div>
+<!-- <div class="w-8 h-16 mx-auto mb-2 relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
+<div class="w-full h-full border-2 border-accent-gold rounded-full flex items-center justify-center bg-[#2b0a0a] relative overflow-hidden">
+<div class="w-3 h-3 bg-red-600 rounded-full shadow-[0_0_10px_red]"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle,_transparent_30%,_#C6A87C_31%,_transparent_32%)]"></div>
+</div>
+</div> -->
+<!-- <h3 class="font-display text-4xl md:text-5xl text-accent-beige font-bold tracking-tight">Virasat <span class="text-accent-gold">'26</span></h3> -->
+</div>
+</div>
+</div>
+</div>
+<!-- 1st circle  -->
+<div class="absolute left-4 top-10 md:left-[6%] md:top-[10%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 15</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Opening Ceremony</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Inauguration &amp; Symphony</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+<!-- 2nd circle  -->
+<div class="absolute md:left-[6%] md:top-[30%] z-10 md:w-auto hidden md:block"> <!-- changed this shyt -->
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/60 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -right-12 top-1/2 w-24 h-[2px] bg-accent-gold/30 hidden md:block"></div>
+<span class="text-accent-gold font-bold tracking-widest text-xl mb-1">NOV 16-18</span>
+<h4 class="text-white font-display text-2xl leading-tight mb-2" contenteditable="true">Cultural Performances</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Dance, drama &amp; vocals</p>
+<div class="absolute -inset-2 rounded-full border border-dashed border-accent-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+</div>
+<!-- 3rd circle -->
+<div class="absolute left-4 bottom-10 md:left-[6%] md:top-[50%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(-30deg); transform-origin: right center;"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 16-20</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Art Exhibitions</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Visual arts display</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+<!-- 4th circle -->
+<div class="absolute left-4 bottom-10 md:left-[6%] md:top-[70%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(-30deg); transform-origin: right center;"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 16-20</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Art Exhibitions</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Visual arts display</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+
+<!-- right 1 circle -->
+<div class="absolute right-4 top-10 md:right-[10%] md:top-[10%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 17-19</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Workshops</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Pottery, music &amp; dance</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+<!-- right 2 circle -->
+<div class="absolute right-4 md:right-[6%] md:transform-none md:top-[30%] z-10 w-full md:w-auto flex justify-center md:block hidden md:flex">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/60 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -left-12 top-1/2 w-24 h-[2px] bg-accent-gold/30 hidden md:block"></div>
+<span class="text-accent-gold font-bold tracking-widest text-xl mb-1">NOV 20</span>
+<h4 class="text-white font-display text-2xl leading-tight mb-2" contenteditable="true">Closing Night</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Grand finale &amp; awards</p>
+<div class="absolute -inset-2 rounded-full border border-dashed border-accent-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+</div>
+<!-- right 3 circle -->
+<div class="absolute right-4 bottom-10 md:right-[6%] md:top-[50%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(30deg); transform-origin: left center;"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">FUTURE</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Legacy Continues</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Virasat '27 Vision</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+<!-- right 4 circle -->
+<div class="absolute right-4 bottom-10 md:right-[6%] md:top-[70%] z-10 w-full md:w-auto flex justify-center md:block">
+<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
+<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(30deg); transform-origin: left center;"></div>
+<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">FUTURE</span>
+<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Legacy Continues</h4>
+<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Virasat '27 Vision</p>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+</div>
+<div class="absolute inset-0 pointer-events-none hidden md:block">
+<svg class="w-full h-full" height="100%" preserveAspectRatio="none" viewBox="0 0 1200 800" width="100%">
+<path d="M 400 400 Q 300 400 200 200" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<path d="M 400 400 Q 250 400 150 400" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<path d="M 400 400 Q 300 400 200 600" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<path d="M 800 400 Q 900 400 1000 200" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<path d="M 800 400 Q 950 400 1050 400" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<path d="M 800 400 Q 900 400 1000 600" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
+<defs>
+<linearGradient id="goldGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#C6A87C;stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:#C6A87C;stop-opacity:0.5"></stop>
+<stop offset="100%" style="stop-color:#C6A87C;stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+<circle cx="300" cy="350" fill="#C6A87C" r="3"></circle>
+<circle cx="250" cy="300" fill="#C6A87C" r="3"></circle>
+<circle cx="300" cy="450" fill="#C6A87C" r="3"></circle>
+<circle cx="250" cy="500" fill="#C6A87C" r="3"></circle>
+<circle cx="900" cy="350" fill="#C6A87C" r="3"></circle>
+<circle cx="950" cy="300" fill="#C6A87C" r="3"></circle>
+<circle cx="900" cy="450" fill="#C6A87C" r="3"></circle>
+<circle cx="950" cy="500" fill="#C6A87C" r="3"></circle>
+</svg>
+</div>
+</div>
+<div class="md:hidden mt-8 grid grid-cols-1 gap-6 px-4">
+</div>
+<div class="mt-12 text-center md:hidden">
+<p class="text-accent-beige/40 text-sm">Swipe to explore timeline</p>
+</div>
+</div>
+</section>
+
+<!-- Virasat Events  -->
+<section class="py-12 overflow-hidden relative bg-[#3B140C]" id="events">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex flex-col items-center text-center">
+<div class="inline-block px-3 py-1 border border-accent-gold/30 rounded-full text-accent-gold text-xs tracking-widest uppercase mb-4">Celebration</div>
+<h2 class="text-4xl font-display font-bold text-white">Virasat Events</h2>
+<p class="mt-4 text-accent-beige/60 max-w-2xl">Discover a series of enchanting events designed to celebrate our rich heritage. Hover over the cards to learn more.</p>
+</div>
+<div class="marquee-container w-full overflow-hidden">
+<div class="flex flex-wrap justify-center gap-8 py-10">
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Dance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-xHCIH6UW-MfYTIwd2XInjXxjQ7Yhd7Qu4-HE7mo7X5ZdzofyL44-7w-n9leL6AhE9Gqy8qWtbESXRC8vLfYbcfJfcqNcDjRLICaRJyiZcMphPn9-f0A3d6jS913ZJVxXESWFmbCRgpmn4VBp_FrU14CTiQaXJD1NDPg3hvlfZq5B9ibsuMYpgpeL-fWBdqaj4iN8NG1y6mpaMwSbSFaGVXz-wAU9vVmMCBohtl7SzOf7VK1mMk3S5qxPbP8BCl5mMKXsl7k1qJT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Dance <br/>Extravaganza</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Experience the rhythm and grace of diverse dance forms from across the Indian subcontinent.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">theater_comedy</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Dance Details</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Join us for a mesmerizing evening of classical and folk dances. Performers include award-winning artists.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Music" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo8tiS-ncE3Sau5pxIlmc6xJ99SydH4wILMdI47kbLZJXLXLHlUbZNf3QHbwu0fgzz8kCtrU20OjXJavQXg1CYkqOuWckPylRlYjHYyRv_wuh-coTSW1679KLnKsA8jlBTBbSYVRxDKb68-2434hrOvVtrMP4LzL62M9lQfMzwI0goqMvqwikwyGt473gZ8bQRsxPoXU0dAfnXtmgi8yJIBoIgIk8hbIRThctqxw3x1kMv64bB_GCliYwF7lT0ZLg-0ouzRqs8Q1Mn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Melodies <br/>of Past</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Journey through time with enchanting cultural performances.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">music_note</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Music Night</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">An acoustic session featuring traditional instruments like the Sitar and Tabla.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Art" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwc5AVYF-JKnUpOcOLuJ48nflVZEBxAge1nrakSkkg0NAsj6WmxKv_z4e4xAQL-pgSXv2btyTzgqxLRG8yKyXWTJDK6SqwrJS_wgQ5uP11EBz9sDlSpsjVmFtovOmVtLynqml4Wf40YBa4Irhh_aRxlxFU3JPJR1ZMUF3WV2JHwpgm-kS0C7IPq-vcvsbREzpEtjAFwhOqIB8idQ2Kh5rNETwvcRkh-OtE5HZlwV7KNittkLSnTU2HWlIpUhOMDJEUTNa9_4IKU6Hb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Art <br/>Through Ages</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Witness a stunning display of artistic creations.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">palette</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Exhibition Info</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Explore rare artifacts and contemporary interpretations of historical art forms.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="History" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Zun-Y_62Gz2-4QSfz2W6YGzxb84qY6H7H70Im_G7MxnsHi2yGLCYqIPTRX6-lwRkdZHD_eT8FpjXbKyvs7y3i8W4QPS6KXFJlwtjtlk5TAcSR-QHyhirLpywA7OOZDLgOeGcq9DpVLBDIO9A0QQ_8wkv9kumhMdDrI5Cob9zsy_P7Nc4T11bJ9BFpwcKuw1SghfJjr6al4Vty9-X5ot0afyno67FhNRJzu2ASSe7dYIqQ9JXR8QwiujETEYoBFUpcSsmQJDIRv9h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">History <br/>Walk</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Explore historical sites and hidden stories.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">hiking</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Heritage Walk</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">A guided tour through the ancient corridors of the city, revealing secrets.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Book Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Dance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-xHCIH6UW-MfYTIwd2XInjXxjQ7Yhd7Qu4-HE7mo7X5ZdzofyL44-7w-n9leL6AhE9Gqy8qWtbESXRC8vLfYbcfJfcqNcDjRLICaRJyiZcMphPn9-f0A3d6jS913ZJVxXESWFmbCRgpmn4VBp_FrU14CTiQaXJD1NDPg3hvlfZq5B9ibsuMYpgpeL-fWBdqaj4iN8NG1y6mpaMwSbSFaGVXz-wAU9vVmMCBohtl7SzOf7VK1mMk3S5qxPbP8BCl5mMKXsl7k1qJT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Dance <br/>Extravaganza</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Experience the rhythm and grace of diverse dance forms.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">theater_comedy</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Dance Details</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Join us for a mesmerizing evening of classical and folk dances.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Virasat Workshops -->
+<section class="py-20 bg-[#3B140C] relative border-t border-white/5" id="workshops">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex flex-col items-center text-center">
+<div class="inline-block px-3 py-1 border border-primary/30 rounded-full text-primary text-xs tracking-widest uppercase mb-4">Learn</div>
+<h2 class="text-4xl font-display font-bold text-white">Virasat Workshops</h2>
+<p class="mt-4 text-accent-beige/60 max-w-2xl">Get hands-on with history. Our workshops offer a unique opportunity to learn traditional crafts from the masters.</p>
+</div>
+<div class="marquee-container w-full overflow-hidden">
+<div class="flex flex-wrap justify-center gap-8 py-10">
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Clay" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbm4esCOgaH05tANNEKGB8OtZqTemx3tElHA5QBcRQWSAklOC0DmN4ouFg2FRAQSIwxjA2WpSalec4TNSmMEjli5SCcdF15O7umyB4UHNSw6NNdFFvHA_cQM8Oa403JQIIjo6vFtoYJel90OQ7fLrOtEx8rhzTroXUdsgH3iLEeaeschFf3KoJa1vTkyViZx-dJ-Rq5NqMZOowAha21gHci3g_dWonS8ur-vv9XRj49svTfusnrd1lZXHBy1x6LS9NjGr6I5gq-MdG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Clay <br/>Creations</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Learn the art of pottery and create your own masterpiece.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Details</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">brush</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Pottery Workshop</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Hands-on session with master potters. All materials provided.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Calligraphy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl0bvUvCLaSIwuTB5ZgEg9NEREBMAkSgxn0S_IsGteNek1aXXrLGcLam8ajW0NWVAN8yl0EIUIuEYzaIhBeedjp8hR15BYs0JPtqyuAvwwGPIhS0HkkCz9_uQjqnY2fsylyZbBGirF0lvj2KGrAi6G8yuuD4x-kXR09cL5iAGbqZm9LXG_lgtKSjs955nfLtmu2H220QYHLDQvj99H0L4n18EohLy247scs7PqolAzZHMwsnoLCP_Qi4Qi9py2Q6aJmhFOQl-FsKBu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Elegant <br/>Script</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Master the beautiful strokes of calligraphy.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Details</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">edit_note</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Calligraphy 101</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Learn traditional ink techniques and brush control. Perfect for beginners.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Textile" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAj3UZx1_s6N9o22ZeH0Cd0hvlRsoU1T5ji2N0HrS1uPQMrm_nDOj4sjmilhrQgz3oLR9E9-GEB1GQw9XY-msH3XI81RvM1yD__STElUxqkz2porsohILNRxvSE-McfL3ZcK-VLPnPGZFCji9yE7_wQRUB_I_BuCyEyJDbrtNo5xeNzw7kmOEJnsx-NzFFB4zIIGDzI3epfdgmFEdL0a8WtHKFM8LuT4-CJV5EfwHohigAbC703FYILN5tiXB0q9_9CWtX4OPOQ2t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Threads <br/>Tradition</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Discover the intricate technique of textile weaving.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Details</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">texture</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Weaving Workshop</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Understand the looms and threads that make our heritage textiles famous worldwide.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Food" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4v9jCeT2ersohisQEXI8iZV9EcCwwnY8WieRSH_d9IINOjkO5j49k8hxnnsYzN44vZb5AvKNWpzjAYKW9HZNN4vOW6FuAb59Aq-M3nnrVsBp_7b4EEPhNwdbDFBChHnsG87tvv8PrEJpi1U6Lxuq-t5nHJjPb_ltRq02cmeCgfrqLlCQBV8q_jyka1h_7-SwuXzKF01C9EfQQovktrN93idnDZz0N423sO4EaHxYQS1ySp_UimEHoCiS90toX8bTrnDYg_1lcChiM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Heritage <br/>Flavors</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Savor authentic tastes of traditional cuisine.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Details</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">restaurant_menu</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Culinary Class</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Cook alongside grandmothers who hold secret family recipes.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Join Now</button>
+</div>
+</div>
+</div>
+<div class="group w-80 h-[28rem] perspective-1000 cursor-pointer">
+<div class="relative w-full h-full text-center transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+<div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-white/5 bg-[#2b0a0a] flex flex-col">
+<div class="h-3/5 w-full relative overflow-hidden">
+<img alt="Clay" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbm4esCOgaH05tANNEKGB8OtZqTemx3tElHA5QBcRQWSAklOC0DmN4ouFg2FRAQSIwxjA2WpSalec4TNSmMEjli5SCcdF15O7umyB4UHNSw6NNdFFvHA_cQM8Oa403JQIIjo6vFtoYJel90OQ7fLrOtEx8rhzTroXUdsgH3iLEeaeschFf3KoJa1vTkyViZx-dJ-Rq5NqMZOowAha21gHci3g_dWonS8ur-vv9XRj49svTfusnrd1lZXHBy1x6LS9NjGr6I5gq-MdG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b0a0a] to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-2xl font-bold text-white font-display leading-tight" contenteditable="true">Clay <br/>Creations</h3>
+</div>
+</div>
+<div class="p-6 text-left flex-1 flex flex-col justify-between bg-[#2b0a0a]">
+<p class="text-sm text-accent-beige/60 line-clamp-3" contenteditable="true">Learn the art of pottery and create your own masterpiece.</p>
+<div class="flex items-center text-accent-gold text-xs font-bold uppercase tracking-widest mt-4">
+<span>Details</span>
+<span class="material-symbols-outlined text-sm ml-2">east</span>
+</div>
+</div>
+</div>
+<div class="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl bg-[#3e1c1c] p-8 flex flex-col justify-center items-center border border-accent-gold/20 relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+<span class="material-symbols-outlined text-accent-gold text-4xl mb-4">brush</span>
+<h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10" contenteditable="true">Pottery Workshop</h3>
+<p class="text-accent-beige/70 text-sm mb-8 relative z-10 text-center leading-relaxed" contenteditable="true">Hands-on session with master potters. All materials provided.</p>
+<button class="bg-accent-gold hover:bg-[#b08d55] text-background-dark px-8 py-3 rounded-full text-sm font-bold transition-colors relative z-10 shadow-lg">Join Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section  -->
+<!--
+<section class="py-24 bg-[#2b0a0a] relative border-t border-white/5" id="about">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary/30 to-orange-900/30 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
+<div class="relative h-96 w-full rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-[#1a0505]">
+<img alt="Virasat Heritage" class="w-full h-full object-cover opacity-60 hover:scale-110 transition-transform duration-700 sepia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMUYyHZcq9ol7VDjRKhUG-tHezbJZw0dS2qHWGar--WrpWrHbWOOBNMjyrgyXxRms581hM0Lyeua0crHsR8DFAHmaHtb48R_4Xe_YfQIDi30RBPxW9kRKaXUrLmiSDy2Trtvc1PkAW66DtyXMlDSWCIggriPQkGLrmfV3UsrbU4A-kuq_v_4mTHPUw3Z6nzMK1VaGNnMNbHlXzkojbZXWBc53dQogpr-HK6VnzNQ0lV-L6QxCSwRCRoz06JQVCAHwt1lBB2uP_1-K"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center p-6 bg-black/60 backdrop-blur-sm rounded-lg border border-white/10">
+<h3 class="text-4xl font-display font-bold text-white mb-2">25+</h3>
+<p class="text-accent-gold text-sm uppercase tracking-widest">Years of Legacy</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-12 h-px bg-accent-gold"></span>
+<span class="text-accent-gold font-medium tracking-wide uppercase text-sm">Our Story</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">Preserving the Past,<br/>Inspiring the Future.</h2>
+<p class="text-accent-beige/70 text-lg mb-6 leading-relaxed">
+                        Virasat '26 is more than just an event; it's a movement to revitalize our shared cultural identity. Born from a passion for history and art, Virasat has grown into a premier platform for artisans, performers, and historians.
+                    </p>
+<p class="text-accent-beige/50 mb-8 leading-relaxed">
+                        This year, we focus on "Heritage in Harmony," exploring how ancient traditions seamlessly blend with modern expressions. Join us as we weave stories of resilience, beauty, and community.
+                    </p>
+<a class="inline-flex items-center text-white font-medium hover:text-accent-gold transition-colors group" href="#">
+                        Read full story <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section> -->
+<!-- <section class="py-16 bg-[#1a0505]/90 border-y border-white/5" id="partners">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-2xl font-display font-bold text-accent-beige mb-10 opacity-70">Our Partners &amp; Sponsors</h2>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-8 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500 hover:opacity-100">
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">museum</span>
+<span class="text-xl font-bold font-display text-white">CULTURE<span class="text-primary">HUB</span></span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">diamond</span>
+<span class="text-xl font-bold font-sans text-white tracking-widest">ROYAL</span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">auto_awesome</span>
+<span class="text-xl font-bold font-display text-white italic">Artistry</span>
+</div>
+<div class="group flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">public</span>
+<span class="text-xl font-bold text-white">Global<span class="font-light">Roots</span></span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 text-center bg-[#2b0a0a] relative overflow-hidden" id="cta">
+<div class="absolute inset-0 z-0 opacity-10">
+<img class="w-full h-full object-cover grayscale mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8_VaZR9pJkeIZsWicPQyG8VAf1x5hb4TqOQD-PRStI2qDjSR-OZeElSjoOXdudU5FGZw1mqoVcOH037LGWtHFtZUiDq-nCcAwIZsut6sKTU5cXrisNQBeVW5fz74rQdEZqSJZkMeZcRqpxCD0zpa_a0xDnoyNNXcwkItl2AQ_X5qzFV2WFX0AXXGqZMGo_c_Q1OW3AjPDCgl2DecSufc2LbXa_X0zj5g92EtjPgGlTi8jktjqiBV3-_OWSTXDLuicPzLA7PXLVNYg"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-4">
+<h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Be a Part of Virasat '26</h2>
+<p class="text-lg text-accent-beige/70 mb-10 max-w-2xl mx-auto">
+                Join us in celebrating our cultural heritage. Volunteer, sponsor, or simply attend and immerse yourself in the festivities.
+            </p>
+<button class="bg-primary hover:bg-red-800 text-white text-lg px-12 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 border border-red-900">
+                Get Involved
+            </button>
+</div>
+</section>
+<footer class="bg-[#150404] text-gray-400 py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left mb-8">
+<div>
+<h4 class="text-white font-bold mb-4 font-display text-lg">Quick Links</h4>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-accent-gold transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-accent-gold transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-center justify-start">
+<h4 class="text-white font-bold mb-4 font-display text-lg">Socials</h4>
+<div class="flex space-x-6">
+<a class="hover:text-accent-gold transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-accent-gold transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+<a class="hover:text-accent-gold transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+</div>
+</div>
+<div class="text-center md:text-right">
+<h4 class="text-white font-bold mb-4 font-display text-lg">Newsletter</h4>
+<div class="flex flex-col sm:flex-row gap-2 justify-center md:justify-end">
+<input class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-accent-gold focus:ring-1 focus:ring-accent-gold outline-none text-white text-sm" placeholder="Your email" type="email"/>
+<button class="bg-accent-gold text-background-dark font-bold px-4 py-2 rounded-lg hover:bg-[#b08d55] transition-colors text-sm">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="text-center border-t border-white/5 pt-8 text-xs text-gray-500">
+<p>© 2026 Virasat '26. All rights reserved.</p>
+</div>
+</div>
+</footer> -->
+<div id="ourPartner">
+        <div id="ourPartnerHeading">
+            <h1>Our Partners</h1>
+        </div>
+        <div id="partnersInfo">
+            <div id="partner1"><br>
+                <div id="partnerPhoto1"><img src="../public/virasat/Ministry_of_Culture_India 4.png" alt="">
+                </div>
+            </div>
+            <div id="partner"><br>
+                <div id="partnerPhoto"><img src="../public/virasat/IITR logo.png" alt=""></div>
+            </div>
+            <div id="partner"><br>
+                <div id="partnerPhoto"><img src="../public/virasat/image 202.png" alt=""></div>
+            </div>
+            <div id="partner"><br>
+                <div id="partnerPhoto"><img src="../public/virasat/sponsor.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- footer starts  -->
+ <div id="Copyright">
+    <h6 class="text-center">
+        Designed and Developed with ♥ by Team SPIC MACAY IITR <br>
+        © SPIC MACAY IIT Roorkee. All rights reserved.
+    </h6>
+</div>
+    <!-- footer ends  -->
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>

@@ -1,11 +1,14 @@
-/* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: "Poppins", sans-serif;
   /* Dark Maroon Background */
-  background: #2b0d0d url("bg-main.png") center/cover no-repeat fixed; 
+  background: #2b0d0d url("bg-main.jpeg") center/cover no-repeat fixed; 
   color: #e3cba5; /* Matte Gold for all text */
+}
+
+html,body{
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -231,6 +234,10 @@ nav a:hover {
   z-index: 2;
 }
 
+#img-vertical{
+  display: none;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -378,7 +385,6 @@ nav a:hover {
   display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
   
 }

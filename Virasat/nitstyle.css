@@ -1,94 +1,69 @@
-.virasat-navbar {
-  width: 100%;
-  background-color: #3B140C;
-  padding: 14px 0;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo img {
-  height: 80px;
-}
-
-.logo-text {
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #2b1208;
-  line-height: 1.1;
-}
-
-.logo-text small {
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-
-/* Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #F2E4C5;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Hover underline */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background-color: #3b1a0a;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #000;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
 .homeNav {
-  animation: dropDown 0.6s ease forwards;
+  background-color: #BC9A5F;
 }
 
-@keyframes dropDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.navbar-brand img {
+  height: 80px;
+  width: auto;
 }
+
+.homeNav a,
+.homeNav .nav-link {
+  color: Black;
+}
+
+.homeNav a:hover {
+  color: #ffffff;
+}
+/* Force Bootstrap nav links */
+.homeNav .nav-link {
+  color: Black !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 10000;
+}
+
+/* Active link */
+.homeNav .nav-link.active {
+  color: Black !important;
+}
+
+/* Hover */
+.homeNav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* .fixed-position for fixed navbar  */
+.fixed-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 242, 0, 0.9), rgba(196, 38, 28, 0.9));
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+/* FORCE NAVBAR LINKS — FINAL OVERRIDE */
+nav.navbar .nav-link {
+  color: Black !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Sticky state */
+nav.navbar.fixed-position .nav-link .nav-link.active {
+  color: #F2E4C5 !important;
+}
+
+/* Active + hover */
+nav.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+
+
+
 /* Add this to your existing <style> block */
 
 /* 1. The Gold Text Effect */

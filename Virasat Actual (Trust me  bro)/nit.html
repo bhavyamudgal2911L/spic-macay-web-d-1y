@@ -10,6 +10,7 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
 <link rel="stylesheet" href="nitstyle.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
@@ -59,6 +60,9 @@
 <style>.perspective-1000 {
     perspective: 1000px
     }
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
 .transform-style-3d {
     transform-style: preserve-3d
     }
@@ -187,7 +191,7 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
              <span class="material-symbols-outlined text-accent-gold text-4xl">spa</span>
         </div>
 
-        <h1 class="hero-title font-display text-[5rem] md:text-[8rem] lg:text-[10rem] font-medium leading-none mb-2">
+        <h1 class="hero-title font-cormorant text-[5rem] md:text-[8rem] lg:text-[10rem] font-medium leading-none mb-2">
   <span class="text-gold-gradient block tracking-wide">Virasat</span>
   <span class="year relative inline-block">
   26
@@ -228,7 +232,7 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 
   <!-- Heading content -->
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <div class="text-center mb-6">
       <h2 class="text-4xl md:text-5xl font-display font-bold text-accent-beige mb-4">
         Timeline of Events
       </h2>
@@ -239,7 +243,7 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </section>
 
 
-<section class="py-12 relative bg-[#3B140C] overflow-hidden" id="timeline">
+<section class="py-6 relative bg-[#3B140C] overflow-hidden" id="timeline">
 <div class="absolute inset-0 opacity-5 pointer-events-none">
 <div class="absolute inset-0" style="background-image: radial-gradient(#C6A87C 1px, transparent 1px); background-size: 30px 30px;"></div>
 </div class="flex items-center justify-center"> <!--yeh uda de if useless-->
@@ -249,9 +253,9 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div> -->
 </div>
 <div> <!--yaha khola-->
-<div class="relative min-h-[950px] flex items-center justify-center py-10">
+<div class="relative min-h-[950px] flex items-center justify-center py-2">
 <div class="relative z-20 flex items-center justify-center">
-<div class="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-accent-gold/20 flex items-center justify-center bg-[] shadow-[0_0_50px_rgba(198,168,124,0.1)] relative">
+<div class="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-accent-gold/20 flex items-center justify-center bg-[] shadow-[0_0_50px_rgba(198,168,124,0.1)] relative">
 <div class="absolute inset-2 rounded-full border border-dashed border-accent-gold/40 animate-spin-slow"></div>
 <div class="absolute inset-6 rounded-full border border-accent-gold/10"></div>
 <div class="absolute inset-0 flex items-center justify-center">
@@ -261,7 +265,7 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
       alt="SPIC MACAY"
       class="absolute inset-0 m-auto w-40 md:w-56 contrast-110 brightness-150 opacity-60 mix-blend-screen pointer-events-none"/>
     
-    <h3 class="font-display text-3xl md:text-6xl font-medium tracking-tight text-[#D9B781] drop-shadow-[0_0_12px_rgba(198,168,124,0.25)]">
+    <h3 class="font-display text-3xl md:text-7xl font-medium tracking-tight text-[#D9B781] drop-shadow-[0_0_12px_rgba(198,168,124,0.25)]">
       Virasat <span>'26</span>
     </h3>
   </div>
@@ -281,85 +285,177 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 <!-- 1st circle  -->
 <div class="absolute left-4 top-10 md:left-[8%] md:top-[10%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 15</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Opening Ceremony</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Inauguration &amp; Symphony</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
-</div>
+  
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              bg-[#2b0a0a] border-2 border-accent-gold/40 
+              hover:border-accent-gold transition-colors 
+              shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <div class="absolute inset-0 rounded-full overflow-hidden">
+      <img 
+        src="dr alankar singh.png"
+        alt="Event icon"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- OPTIONAL overlay / hover ring -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
+
 </div>
 <!-- 2nd circle  -->
-<div class="absolute md:left-[6%] md:top-[30%] z-10 md:w-auto hidden md:block"> <!-- changed this shyt -->
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/60 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -right-12 top-1/2 w-24 h-[2px] bg-accent-gold/30 hidden md:block"></div>
-<span class="text-accent-gold font-bold tracking-widest text-xl mb-1">NOV 16-18</span>
-<h4 class="text-white font-display text-2xl leading-tight mb-2" contenteditable="true">Cultural Performances</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Dance, drama &amp; vocals</p>
-<div class="absolute -inset-2 rounded-full border border-dashed border-accent-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-</div>
-</div>
-<!-- 3rd circle -->
-<div class="absolute left-4 bottom-10 md:left-[6%] md:top-[50%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(-15deg); transform-origin: right center;"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 16-20</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Art Exhibitions</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Visual arts display</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
-</div>
-</div>
-<!-- 4th circle -->
-<div class="absolute left-4 bottom-10 md:left-[8%] md:top-[70%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -right-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(-30deg); transform-origin: right center;"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 16-20</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Art Exhibitions</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Visual arts display</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
-</div>
+<div class="absolute md:left-[6%] md:top-[30%] z-10 md:w-auto hidden md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/60 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"/>
+    <!-- HOVER DASHED RING -->
+    <div class="absolute -inset-2 rounded-full border border-dashed 
+                border-accent-gold/30 opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500"></div>
+
+  </div>
 </div>
 
+<!-- 3rd circle -->
+<div class="absolute left-4 bottom-10 md:left-[6%] md:top-[50%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/40 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+ <!-- HOVER RING -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
+</div>
+
+<!-- 4th circle -->
+<div class="absolute left-4 bottom-10 md:left-[8%] md:top-[70%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/40 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- HOVER RING -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
+</div>
+
+
 <!-- right 1 circle -->
-<div class="absolute right-4 top-10 md:right-[8%] md:top-[10%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">NOV 17-19</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Workshops</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Pottery, music &amp; dance</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+<div class="absolute right-4 top-10 md:right-[8%] md:top-[10%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/40 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- HOVER RING -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
 </div>
-</div>
+
 <!-- right 2 circle -->
-<div class="absolute right-4 md:right-[6%] md:transform-none md:top-[30%] z-10 w-full md:w-auto flex justify-center md:block hidden md:flex">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/60 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -left-12 top-1/2 w-24 h-[2px] bg-accent-gold/30 hidden md:block"></div>
-<span class="text-accent-gold font-bold tracking-widest text-xl mb-1">NOV 20</span>
-<h4 class="text-white font-display text-2xl leading-tight mb-2" contenteditable="true">Closing Night</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Grand finale &amp; awards</p>
-<div class="absolute -inset-2 rounded-full border border-dashed border-accent-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute right-4 md:right-[6%] md:top-[30%] z-10 
+            w-full md:w-auto flex justify-center md:block hidden md:flex">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/60 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- DASHED HOVER RING -->
+    <div class="absolute -inset-2 rounded-full border border-dashed 
+                border-accent-gold/30 opacity-0 
+                group-hover:opacity-100 transition-opacity duration-500"></div>
+
+  </div>
 </div>
-</div>
+
 <!-- right 3 circle -->
-<div class="absolute right-4 bottom-10 md:right-[6%] md:top-[50%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(30deg); transform-origin: left center;"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">FUTURE</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Legacy Continues</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Virasat '27 Vision</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+<div class="absolute right-4 bottom-10 md:right-[6%] md:top-[50%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/40 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- HOVER RING -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
 </div>
-</div>
+
 <!-- right 4 circle -->
-<div class="absolute right-4 bottom-10 md:right-[8%] md:top-[70%] z-10 w-full md:w-auto flex justify-center md:block">
-<div class="timeline-circle-node w-44  h-44 rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 hover:border-accent-gold transition-colors flex flex-col items-center justify-center text-center p-6 shadow-2xl relative group">
-<div class="absolute -left-8 top-1/2 w-16 h-[2px] bg-accent-gold/30 hidden md:block" style="transform: rotate(30deg); transform-origin: left center;"></div>
-<span class="text-accent-gold font-bold tracking-widest text-lg mb-1">FUTURE</span>
-<h4 class="text-white font-display text-xl leading-tight mb-2" contenteditable="true">Legacy Continues</h4>
-<p class="text-accent-beige/60 text-xs leading-relaxed" contenteditable="true">Virasat '27 Vision</p>
-<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-primary/20 transition-all duration-500"></div>
+<div class="absolute right-4 bottom-10 md:right-[8%] md:top-[70%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
+              border-2 border-accent-gold/40 hover:border-accent-gold 
+              transition-colors shadow-2xl relative group overflow-hidden">
+
+    <!-- FULL-COVER IMAGE -->
+    <img
+      src="Blank white circle.png"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- HOVER RING -->
+    <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                group-hover:border-primary/20 transition-all duration-500"></div>
+
+  </div>
 </div>
-</div>
+
+<!-- circles over  -->
 <div class="absolute inset-0 pointer-events-none hidden md:block">
 <svg class="w-full h-full" height="100%" preserveAspectRatio="none" viewBox="0 0 1200 800" width="100%">
 <path d="M 400 400 Q 300 400 200 200" fill="none" stroke="url(#goldGradient)" stroke-width="2"></path>
@@ -395,8 +491,10 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 </section>
 
+<div class="w-full h-px bg-white/30"></div>
+
 <!-- Virasat Events  -->
-<section class="py-12 overflow-hidden relative bg-[#3B140C]" id="events">
+<section class="py-6 overflow-hidden relative bg-[#3B140C]" id="events">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex flex-col items-center text-center">
 <div class="inline-block px-3 py-1 border border-accent-gold/30 rounded-full text-accent-gold text-xs tracking-widest uppercase mb-4">Celebration</div>
 <h2 class="text-4xl font-display font-bold text-white">Virasat Events</h2>
@@ -542,6 +640,9 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 </div>
 </section>
+
+<div class="w-full h-px bg-white/30"></div>
+
 <!-- Virasat Workshops -->
 <section class="py-20 bg-[#3B140C] relative border-t border-white/5" id="workshops">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex flex-col items-center text-center">
@@ -796,6 +897,9 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 </div>
 </footer> -->
+
+<div class="w-full h-px bg-white/30"></div>
+
 <div id="ourPartner">
         <div id="ourPartnerHeading">
             <h1>Our Partners</h1>

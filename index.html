@@ -288,176 +288,400 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 </div>
 </div>
-<!-- 1st circle  -->
-<div class="absolute left-4 top-10 md:left-[15%] md:top-[10%] z-10 w-full md:w-auto flex justify-center md:block">
-  
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              bg-[#2b0a0a] border-2 border-accent-gold/40 
-              hover:border-accent-gold transition-colors 
-              shadow-2xl relative group overflow-hidden">
 
-    <!-- FULL-COVER IMAGE -->
-    <div class="absolute inset-0 rounded-full overflow-hidden">
-      <img 
-        src="dr alankar singh.png"
-        alt="Event icon"
-        class="w-full h-full object-cover"
-      />
+<!-- 1st circle  -->
+<div class="absolute left-4 top-10 md:left-[15%] md:top-[10%] z-10 
+            w-full md:w-auto flex justify-center md:block">
+
+  <!-- DATE (above circle) -->
+  <div class="flex flex-col items-center gap-2">
+
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      21 JAN
     </div>
 
-    <!-- OPTIONAL overlay / hover ring -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full bg-[#2b0a0a] border-2 border-accent-gold/40 
+                hover:border-accent-gold transition-colors 
+                shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <div class="absolute inset-0 rounded-full overflow-hidden">
+        <img 
+          src="Mohiniyattam.png"
+          alt="Event icon"
+          class="w-full h-full object-cover"
+        />
+        <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#fff2cc]">
+        Mohiniyattam
+      </div>
+
+      <!-- OPTIONAL overlay / hover ring -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
-
 </div>
-<!-- 2nd circle  -->
-<div class="absolute md:left-[6%] md:top-[28.5%] z-10 md:w-auto hidden md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/60 hover:border-accent-gold 
+<!-- 2nd circle  -->
+<div class="absolute md:left-[6%] md:top-[28.5%] z-10 hidden md:flex flex-col items-center gap-2">
+
+  <!-- DATE (above circle) -->
+  <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+    23 JAN
+  </div>
+
+  <!-- CIRCLE -->
+  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44
+              rounded-full border-2 border-accent-gold/60 hover:border-accent-gold
               transition-colors shadow-2xl relative group overflow-hidden">
 
     <!-- FULL-COVER IMAGE -->
     <img
-      src="Blank white circle.png"
+      src="Hindustani Vocals.png"
       alt=""
       class="absolute inset-0 w-full h-full object-cover"/>
+
+    <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+    <!-- EVENT NAME (inside circle, lower half) -->
+    <div class="absolute inset-x-3 top-[70%] text-center
+                text-sm md:text-base font-medium text-[#ffff]
+                leading-tight pointer-events-none
+                transition-colors duration-300
+                group-hover:text-[#3d260f]">
+      Hindustani Vocals
+    </div>
+
     <!-- HOVER DASHED RING -->
-    <div class="absolute -inset-2 rounded-full border border-dashed 
-                border-accent-gold/30 opacity-0 
+    <div class="absolute -inset-2 rounded-full border border-dashed
+                border-accent-gold/30 opacity-0
                 group-hover:opacity-100 transition-opacity duration-500"></div>
 
   </div>
 </div>
+
 
 <!-- 3rd circle -->
 <div class="absolute left-4 bottom-10 md:left-[6%] md:top-[52.5%] z-10 
             w-full md:w-auto flex justify-center md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/40 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
- <!-- HOVER RING -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      24 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Hindustani Vocals (1).png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+        Hindustani Vocals
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- 4th circle -->
 <div class="absolute left-4 bottom-10 md:left-[15%] md:top-[70%] z-10 
             w-full md:w-auto flex justify-center md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/40 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <!-- HOVER RING -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      27 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Movie Screening.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+          Movie Screening
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- right 1 circle -->
 <div class="absolute right-4 top-10 md:right-[15%] md:top-[10%] z-10 
             w-full md:w-auto flex justify-center md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/40 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <!-- HOVER RING -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      22 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Bagh Print.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[75%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+        Bagh Print
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- right 2 circle -->
 <div class="absolute right-4 md:right-[6%] md:top-[28.5%] z-10 
-            w-full md:w-auto flex justify-center md:block hidden md:flex">
+            w-full md:w-auto hidden md:flex justify-center">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/60 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <!-- DASHED HOVER RING -->
-    <div class="absolute -inset-2 rounded-full border border-dashed 
-                border-accent-gold/30 opacity-0 
-                group-hover:opacity-100 transition-opacity duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      24 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/60 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Kathak.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[75%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+        Kathak
+      </div>
+
+      <!-- DASHED HOVER RING -->
+      <div class="absolute -inset-2 rounded-full border border-dashed 
+                  border-accent-gold/30 opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- right 3 circle -->
 <div class="absolute right-4 bottom-10 md:right-[6%] md:top-[51.5%] z-10 
             w-full md:w-auto flex justify-center md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/40 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <!-- HOVER RING -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      25 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Gurbani.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+        Gurbani
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- right 4 circle -->
 <div class="absolute right-4 bottom-10 md:right-[15%] md:top-[70%] z-10 
             w-full md:w-auto flex justify-center md:block">
 
-  <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full 
-              border-2 border-accent-gold/40 hover:border-accent-gold 
-              transition-colors shadow-2xl relative group overflow-hidden">
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
 
-    <!-- FULL-COVER IMAGE -->
-    <img
-      src="Blank white circle.png"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <!-- HOVER RING -->
-    <div class="absolute inset-0 rounded-full border-4 border-transparent 
-                group-hover:border-primary/20 transition-all duration-500"></div>
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      28 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Qawwali.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+                  text-xs sm:text-sm md:text-base
+                  font-medium text-[#ffff]
+                  leading-tight pointer-events-none
+                  transition-colors duration-300
+                  group-hover:text-[#3d260f]">
+        Qawwali
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
 
   </div>
 </div>
+
 
 <!-- circles over  -->
 <div class="absolute inset-0 pointer-events-none hidden md:block">

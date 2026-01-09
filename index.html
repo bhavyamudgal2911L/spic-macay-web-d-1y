@@ -247,8 +247,8 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 
 </section>
 
-
-<section class="py-6 relative bg-[#3B140C] overflow-hidden" id="timeline">
+<!-- Desktop Timeline -->
+<section class="py-6 relative bg-[#3B140C] overflow-hidden hidden md:block" id="timeline">
 <div class="absolute inset-0 opacity-5 pointer-events-none">
 <div class="absolute inset-0" style="background-image: radial-gradient(#C6A87C 1px, transparent 1px); background-size: 30px 30px;"></div>
 </div class="flex items-center justify-center"> <!--yeh uda de if useless-->
@@ -720,6 +720,111 @@ class="bg-[#CD7F32] text-white dark:text-gray-200 font-sans transition-colors du
 </div>
 </section>
 
+<!-- Mobile Timeline -->
+<section class="py-6 relative bg-[#3B140C] overflow-hidden block md:hidden" id="timeline">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<div class="absolute inset-0" style="background-image: radial-gradient(#C6A87C 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div class="flex items-center justify-center"> <!--yeh uda de if useless-->
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- <div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-display font-bold text-accent-beige mb-4">Timeline of Events</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div> -->
+</div>
+<div> <!--yaha khola-->
+<div class="relative min-h-[950px] flex items-center justify-center py-2">
+<div class="relative z-20 flex items-center justify-center">
+<div class="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-accent-gold/20 flex items-center justify-center bg-[] shadow-[0_0_50px_rgba(198,168,124,0.1)] relative">
+<div class="absolute inset-2 rounded-full border border-dashed border-accent-gold/40 animate-spin-slow"></div>
+<div class="absolute inset-6 rounded-full border border-accent-gold/10"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+  <div class="flex flex-col items-center gap-3">
+    <img 
+      src="eyelogo.png"
+      alt="SPIC MACAY"
+      class="absolute inset-0 m-auto w-40 md:w-56 contrast-110 brightness-150 opacity-60 mix-blend-screen pointer-events-none"/>
+    
+    <h3 class="font-display text-xl sm:text-2xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#D9B781] drop-shadow-[0_0_12px_rgba(198,168,124,0.25)]">
+      Virasat <span>'26</span>
+    </h3>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- circle random  -->
+<div class="absolute right-[120px] top-10 md:right-[15%] md:top-[70%] z-10 
+            w-full md:w-auto flex justify-center md:hidden">
+
+  <!-- DATE + CIRCLE WRAPPER -->
+  <div class="flex flex-col items-center gap-2">
+
+    <!-- DATE -->
+    <div class="text-[0.9rem] tracking-widest text-[#F2E4C5] font-medium">
+      28 JAN
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="timeline-circle-node w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                rounded-full border-2 border-accent-gold/40 hover:border-accent-gold 
+                transition-colors shadow-2xl relative group overflow-hidden">
+
+      <!-- FULL-COVER IMAGE -->
+      <img
+        src="Qawwali.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- GRADIENT OVERLAY (for text readability) -->
+        <div class="absolute inset-0 bg-gradient-to-t
+            from-black/70 via-black/30 to-transparent
+            pointer-events-none">
+        </div>
+
+      <!-- EVENT NAME (inside circle, lower half) -->
+      <div class="absolute inset-x-3 top-[70%] text-center
+       text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base
+       font-medium text-white
+       leading-tight pointer-events-none
+       transition-all duration-300
+       group-hover:text-white">
+        Qawwali
+      </div>
+
+      <!-- HOVER RING -->
+      <div class="absolute inset-0 rounded-full border-4 border-transparent 
+                  group-hover:border-primary/20 transition-all duration-500"></div>
+
+    </div>
+
+  </div>
+</div>
+<div class="absolute inset-0 pointer-events-none block md:hidden z-10">
+<svg class="w-full h-full" height="100%" preserveAspectRatio="none" viewBox="0 0 360 800" width="100%">
+<path
+  d="
+    M 180 300
+    Q 230 262.5 180 225
+    Q 130 187.5 180 150
+    Q 230 112.5 180 75
+    Q 130 36.5 180 0
+  "
+  fill="none"
+  stroke="#B08D57"
+  stroke-width="2"
+/>
+ 
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Interface line -->
 <div class="w-full h-px bg-white/30"></div>
 
 <!-- Virasat Events  -->
